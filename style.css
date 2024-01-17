@@ -66,6 +66,12 @@
     right: 17px;
     color: #f00;
 }
+#submitError{
+    position: absolute;
+    bottom: 12px;
+    left: 17px;
+    color: #f00;
+}
 .input-group input, .input-group textarea{
     flex-basis: 68%;
     background: transparent;
