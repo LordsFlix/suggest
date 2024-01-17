@@ -4,6 +4,7 @@
 var nameError = document.getElementById('nameError');
 var emailError = document.getElementById('emailError');
 var movieError = document.getElementById('movieError');
+var submitError = document.getElementById('submitError');
 
 function validateName(){
     var name = document.getElementById('contact-name').value;
@@ -46,7 +47,14 @@ function validateMovie(){
     return true;
 }
 
-
+function validateForm(){
+    if(!validateName() || !validateEmail() || !validateMovie()){
+        submitError.innerHTML = '*Please fill out the form correctly';
+        return false;
+    }
+    submitError.innerHTML = '<i class="fas fa-check-circle"></i>';
+    return true;
+}
 // ---------------------------------------------------Back-End---------------------------------------------------\\
 
 
